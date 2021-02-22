@@ -1,0 +1,9 @@
+<!--pages/demo/demo.wxml-->
+<view>
+  <!-- <map longitude="{{longitude}}" latitude="{{latitude}}"></map> -->
+  <view>{{msg}}</view>
+  <button bindtap="clickMe">点击我</button>
+  <button bindtap="clickDemo">测试接口</button>
+  <view>{{demoDeatil || ""}}</view>
+  <button bindtap="clickDemoDetail">测试接口返回数据</button>
+</view>
