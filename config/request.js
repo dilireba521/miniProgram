@@ -1,4 +1,6 @@
-const Api = require('./api')
+//网络请求封装
+import Api from "./api"
+
 class HttpUtil {
   /**
    * GET 请求分装
@@ -7,6 +9,18 @@ class HttpUtil {
     return this.request(url, data, "GET")
   }
 
+  /** 
+   * POST 请求封装
+   * */
+  post(url, data = {}) {
+    return this.request(url, data, "POST")
+  }
+  /** 
+   * POST 请求封装
+   * */
+  put(url, data = {}) {
+    return this.request(url, data, "PUT")
+  }
   /***
    * 微信的request
    */
@@ -22,7 +36,6 @@ class HttpUtil {
           'Content-Type': contentType,
           'Authorization': 'Token mobile:' + token
         },
-        //这里的超时，在app.json 也能配？
         timeout: 0,
         success: (res) => {
           console.log('===============================================================================================')
@@ -62,7 +75,8 @@ class HttpUtil {
    * Token 信息存储
    */
   getToken() {
-    const token = Api.token;
+    //TODO 通过缓存将token内容保存
+    const {token} =  new Api();
     return token || ""
   }
 

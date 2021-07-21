@@ -1,7 +1,11 @@
-//后端路径集合配置
-const crowdApiUrl = require('./crowdApi')
+//后端接口-配置集合
+import Api from "./api"
+import crowdApiUrl from "./crowdApi"
+import xhrApiUrl from "./xhrApi"
 
 class apiConfig {
-  crowdApiUrl = crowdApiUrl
+  configApi = new Api()
+  crowdApiUrl = new crowdApiUrl(this.configApi)
+  xhrApiUrl = new xhrApiUrl(this.configApi)
 }
 module.exports = new apiConfig();

@@ -1,0 +1,10 @@
+<!-- 组件模板 -->
+<view class="wrapper">
+ {{innerText}}
+  <slot name="before" class="preview"></slot>
+  <view class="preview">这里是隔断</view>
+  <slot name="after"></slot>
+  <button bindtap="onTap">点击测试</button>
+  <view wx:if="{{a}}">普通数据字段1</view>
+  <view wx:if="{{_b}}">普通数据字段2</view>
+</view>

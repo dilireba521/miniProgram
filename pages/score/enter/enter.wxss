@@ -1,0 +1,11 @@
+/* pages/score/creditEnter.wxss */
+.layout{
+  padding:20px;
+}
+.input_layout {
+  height: 40px;
+  padding:0 6px;
+  border:1px solid gray;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}

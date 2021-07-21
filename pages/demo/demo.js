@@ -6,9 +6,32 @@ Page({
    */
   data: {
     msg: 'hello world',
+    msgDetail: "1",
     latitude: null,
     longitude: null,
     demoDeatil: null,
+    buttonList:["学分录入","查询学分"],
+    firstDetail: "niahaode daslkdlka klaskd"
+  },
+  //跳转页面
+  jumpClick:function(e){
+    let _url = '../../pages/score/';
+    let _index = e.currentTarget.dataset.index;
+    switch(_index){
+      case 0:
+        _url+="enter/enter";
+        break;
+        case 1:
+          _url+="query/query";
+        break;
+    }
+    wx.navigateTo({
+      url: _url,
+    })
+  },
+  //测试-事件
+  onMyEvent: function (e) {
+    console.log(e);
   },
   //测试接口数据
   clickDemoDetail: function () {

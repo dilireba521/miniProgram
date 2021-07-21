@@ -1,1 +1,7 @@
 /* pages/demo/demo.wxss */
+/* :host {
+  color: yellow;
+} */
+.preview {
+  color: #c6f543;
+}

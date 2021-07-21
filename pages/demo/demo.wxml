@@ -1,9 +1,20 @@
 <!--pages/demo/demo.wxml-->
 <view>
   <!-- <map longitude="{{longitude}}" latitude="{{latitude}}"></map> -->
-  <view>{{msg}}</view>
-  <button bindtap="clickMe">点击我</button>
-  <button bindtap="clickDemo">测试接口</button>
+  <!-- <view>{{msg}}</view> -->
+  <!-- <view>{{msgDetail}}</view> -->
+  <button wx:for="{{buttonList}}" wx:key="index" bindtap="jumpClick" data-index="{{index}}">{{item}}</button>
+  <!-- <button bindtap="clickMe">点击我</button> -->
+  <!-- <button bindtap="clickDemo">测试接口</button>
   <view>{{demoDeatil || ""}}</view>
-  <button bindtap="clickDemoDetail">测试接口返回数据</button>
+  <button bindtap="clickDemoDetail">测试接口返回数据</button> -->
+  <!-- <first bind:myevent="onMyEvent" inner-text="{{firstDetail}}">
+  
+    <view slot="before">before组件slot中的内容</view>
+    <view slot="after">after组件slot中的内容</view>
+  </first> -->
+  <!-- <view>custom-radio</view>
+  <selectable-group generic:selectable="custom-radio"></selectable-group>
+  <view>custom-checkbox</view>
+  <selectable-group generic:selectable="custom-checkbox"></selectable-group> -->
 </view>

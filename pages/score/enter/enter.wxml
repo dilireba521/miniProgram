@@ -1,0 +1,10 @@
+<!--pages/score/creditEnter.wxml-->
+<view class="layout">
+<form catchsubmit="formSubmit" catchreset="formReset">
+  <view wx:for="{{inputList}}" wx:key="index">
+    <text>{{item.name}}</text>
+    <input class="input_layout" type="{{index == 0 ? 'text' : 'number'}}" value="{{item.value}}" name="{{item.key}}" />
+  </view>
+  <button form-type="submit">提交</button>
+</form>
+</view>

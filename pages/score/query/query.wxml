@@ -1,0 +1,32 @@
+<!--pages/score/query/query.wxml-->
+<view>
+  <view>
+        <view class="search_layout">
+            <view class="search_layout__form">
+            <!-- 搜索框 -->
+                <view class="search_layout__box">
+                    <icon class="search_icon_in-box" type="search" size="18"></icon>
+                    <input value="{{searchVal}}" type="text" class="search_layout__input" 
+                    bindinput="getSearchVal"
+                    placeholder="请输入搜索内容"/>
+                </view>
+            </view>
+            <!-- 搜索按钮,调用搜索查询方法 -->
+            <view class="search_layout__cancel-btn" bindtap='searchClick'>搜索</view>
+        </view>
+    </view>
+    <!-- 结果区 -->
+    <!-- index.wxml-->
+    <view>
+        <view 
+        class="item_layout"
+        wx:for="{{resList}}" wx:for-item="item" wx:key="index" bindtap="jumpClick" data-id="{{item._id}}">
+            <view class="item_name">{{item.name}}</view>
+            <view>语文：{{item.chinese}}</view>
+            <view>数学：{{item.math}}</view>
+            <view>英语：{{item.english}}</view>
+            <mp-icon icon="arrow" color="grey" size="{{14}}"></mp-icon>
+        </view>
+    </view>
+</view>
+
